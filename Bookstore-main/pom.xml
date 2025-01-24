@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.bookstore</groupId>
+	<artifactId>bookstore-api</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+	<name>Bookstore API</name>
+	<description>RESTful API for managing bookstore operations</description>
+
+	<properties>
+		<java.version>21</java.version>
+		<spring-boot.version>3.4.1</spring-boot.version> <!-- Set Spring Boot version explicitly -->
+	</properties>
+
+	<dependencies>
+		<!-- Spring Boot Starter Web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring-boot.version}</version> <!-- Use version from properties -->
+		</dependency>
+
+
+		<!-- Spring Boot Starter Data JPA -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>${spring-boot.version}</version> <!-- Use version from properties -->
+		</dependency>
+
+		<!-- H2 Database for Testing -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>2.3.232</version> <!-- Use the latest version available -->
+			<scope>runtime</scope>
+		</dependency>
+
+
+		<!-- Spring Boot DevTools for Development -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<version>${spring-boot.version}</version> <!-- Use version from properties -->
+		</dependency>
+
+		<!-- Spring Boot Starter Test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<version>${spring-boot.version}</version> <!-- Use version from properties -->
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Spring Boot Maven Plugin -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${spring-boot.version}</version> <!-- Use version from properties -->
+			</plugin>
+		</plugins>
+	</build>
+</project>
